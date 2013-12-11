@@ -1,6 +1,6 @@
 module MainHelper
 	def inline_form
-		form_tag("/", method:"post", class:"form-inline inline") do
+		form_tag(".", method:"post", class:"form-inline inline") do
 			hidden = hidden_field_tag 'query', '\1' #implicit field that will send the query (ie, query will go into \1)
 			link = link_to '\1', "#", :onclick => "$(this).closest('form').submit()" #submit the closest form
 			hidden + link
